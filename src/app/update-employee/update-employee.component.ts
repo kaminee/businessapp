@@ -29,7 +29,7 @@ export class UpdateEmployeeComponent implements OnInit {
   }
 
   updateEmployee() {
-    this.employeeService.updateEmployee(this.id, this.employee)
+    this.employeeService.updateEmployee(this.id,this.employee)
       .subscribe(data => {
         console.log(data);
         this.employee = new Employee();

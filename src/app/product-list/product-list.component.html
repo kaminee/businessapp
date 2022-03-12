@@ -1,4 +1,4 @@
-<div class="panel panel-primary">
+<!-- <div class="panel panel-primary">
   <div class="panel-heading">
     <h2>Product List</h2>
   </div>
@@ -26,4 +26,16 @@
     </table>
   </div>
 </div>
-
+ -->
+                <button (click)="deleteProd()" class="btn btn-danger">Delete</button>
+ 
+<ag-grid-angular
+    style="width: 700px; height: 500px;"
+    class="ag-theme-blue"
+    (gridReady)="onGridReady($event)"
+    [rowData]="productslist"
+    [columnDefs]="columnDefs"
+    rowSelection="multiple"  [pagination]="true"
+    [paginationPageSize]="5" 
+>
+</ag-grid-angular>

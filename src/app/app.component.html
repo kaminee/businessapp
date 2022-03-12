@@ -18,16 +18,16 @@
   </ul>
 </nav>
  -->
-<nav>
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark ">
   <ul id='menu' >
     <li><a class='home' href='/'>Home</a></li>
-    <li><a class='prett' href='#' title='Menu'>Products</a>
+    <li><a class='prett' routerLink="products"  title='Menu'>Products</a>
       <ul class='menus'>
         <li  class="nav-item"><a routerLink="products" class="nav-link" routerLinkActive="active">Product List</a></li>
         <li  class="nav-item">  <a routerLink="product/add" class="nav-link" routerLinkActive="active">Add Product</a></li>
       </ul>
     </li>
-       <li><a class='prett' href='#' title='Menu'>Employees</a>
+       <li><a class='prett' routerLink="employees"title='Menu'>Employees</a>
       <ul class='menus'>
          <li class="nav-item">
         <a routerLink="employees" class="nav-link" routerLinkActive="active">Employee List</a>
@@ -53,6 +53,6 @@
 
 <footer class="footer">
   <div class="container">
-      <span>demo application</span>
+      <span>Kaminee's Business Application</span>
   </div>
 </footer>

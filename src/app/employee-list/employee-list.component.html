@@ -1,4 +1,4 @@
-<div class="panel panel-primary">
+<!-- <div class="panel panel-primary">
   <div class="panel-heading">
     <h2>Employee List</h2>
   </div>
@@ -17,13 +17,51 @@
           <td>{{employee.firstName}}</td>
           <td>{{employee.lastName}}</td>
           <td>{{employee.emailId}}</td>
-          <td><button (click)="deleteEmployee(employee.id)" class="btn btn-danger">Delete</button>
-              <button (click)="updateEmployee(employee.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
-              <button (click)="employeeDetails(employee.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+          <td>
+          		<button (click)="deleteEmployee(employee.id)" class="btn btn-danger">Delete</button>
+              <button (click)="updateEmployee(employee.id)" class="btn btn-sm btn-primary" style="margin-left: 10px">Update</button>
+              <button (click)="employeeDetails(employee.id)" class="btn btn-sm btn-success button" style="margin-left: 10px">Details</button>
           </td>
         </tr>
       </tbody>
     </table>
+    
+  
   </div>
-</div>
+</div> -->
+<!-- 
+  <ag-grid-angular 
+	style="width: 500px; height: 500px;" 
+	class="ag-theme-alpine"
+	[rowData]="emps" 
+	[columnDefs]="columnDefs">
+</ag-grid-angular> -->
 
+<div class="panel panel-primary">
+  <div class="panel-heading">
+   <h2 class="header">Employee AG Grid CRUD Angular By Kaminee Balkawade</h2>  
+    <hr>  
+        <div class="row">  
+            <div class="col-md-8"> <button (click)="deleteEmp()" class="btn btn-danger">Delete</button>
+              <button (click)="updateEmployee()" class="btn btn-sm btn-primary" style="margin-left: 10px">Update</button>
+              <button (click)="employeeDetails()" class="btn btn-sm btn-success button" style="margin-left: 10px">Details</button>
+       </div>  
+            <div class="col-md-4">  
+              
+            </div>  
+        </div>  
+        <br>  
+         
+           <ag-grid-angular
+    style="width: 500px; height: 340px;"
+    class="ag-theme-alpine"
+     (gridReady)="onGridReady($event)"
+    [rowData]="emps"
+    [columnDefs]="columnDefs"
+    rowSelection="multiple"
+     [pagination]="true"
+    [paginationPageSize]="5" >
+</ag-grid-angular>
+</div>  
+       </div> 
+       
